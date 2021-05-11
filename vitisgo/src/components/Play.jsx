@@ -4,11 +4,18 @@ import "../App.css"
 import Logo from '../asset/logo.png';
 
 function Play () {
+    const [playGame, setPlayGame] = React.useState(false);
+function handleChange (){
+    setPlayGame(!playGame);
+}
+if (playGame === true) {
+  return (<Map />);
+}
 
     return(
         <div className="playPage">
             <img className="playImage" src={Logo} alt="logo" />
-            <button className="btn" type="button" onClick={Map}>Play</button>
+            <button className="btn" type="button" onClick={handleChange}>Play</button>
         </div>
     )
 }

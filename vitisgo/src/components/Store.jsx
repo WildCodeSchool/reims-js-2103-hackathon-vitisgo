@@ -2,12 +2,21 @@ import React from 'react';
 import Img1 from '../asset/IMG1.jpg';
 import Img2 from '../asset/IMG2.jpg';
 import Img3 from '../asset/IMG3.jpg';
-import './Store.css'
-
+import Map from './Map';
+import './Store.css';
 
 function Store (){
 const [imageChange,setImageChange]= React.useState();
 const [hiddenShop,setHiddenShop]= React.useState(false);
+const [pageMap, setPageMap] = React.useState(false);
+    function handleChange (){
+        setPageMap(!pageMap);
+    }
+    if (pageMap === true) {
+      return (<Map />);
+    }
+
+
 function changeState(){
     setHiddenShop(true)
 }
@@ -27,6 +36,7 @@ function onClickTwo(){
         <img className="Image" src={imgList[imageChange] ?? Img1} alt="" />
     </div>
   <button className="hiddenShop" type="button" onClick={changeState}>Shop</button>
+  <button className="return" type="button" onClick={handleChange}>Retour</button>
   { hiddenShop === true && (
     <div className="Shop">
         <button className="btnShop" type="button" onClick={onClickOne} >Amélioration 1</button>
