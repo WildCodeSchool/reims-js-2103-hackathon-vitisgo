@@ -19,13 +19,13 @@
     background-color: rgb(27, 27, 27);
     z-index: 3;
     position: relative;
-    bottom: 32vh;
+    bottom: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:25vh;
-    border-top: solid rgb(1, 83, 1) 5px;;
+    height:30vh;
+    border-top: solid rgb(1, 83, 1) 5px;
 }
 .btnShop{
     height: 40px;
