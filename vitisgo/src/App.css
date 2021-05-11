@@ -1,16 +1,30 @@
-*{
-  margin: 0;
+
+.App{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .btn{
-  color:rgb(1, 83, 1);
+  background-color: rgb(250, 250, 250);
+  border: solid rgb(1, 83, 1) 2px;
+  color: rgb(1, 83, 1);
+  border-radius: 5px;
+  font-size: 2rem;
+  padding: 5px;
+  width: 100px;
+  
 }
 
 .playPage {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content:center;
+  margin-top: 25vh; 
 }
 
 .playImage {
-  height: 400px;
+  height:150px;
+  width: 200px;
 }

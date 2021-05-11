@@ -1,30 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './List.css'
 
 const Navigation = () => {
     return (    
-    <div>
+    <div className="list">
         <ul>
             <li>
             <NavLink exact to="/" activeClassName="navActive">
                 <span>Accueil</span>
-            </NavLink>
-            </li>
-            <li>
-            <NavLink exact to="/pourquoi" 
-            activeClassName="navActive">
-                <span>Pourquoi ?</span>
-            </NavLink>
-            </li>
-            <li>
-            <NavLink exact to="/comment" activeClassName="navActive">
-                <span>Comment ?</span>
-            </NavLink>
-            </li>
-            <li>
-            <NavLink exact to="/avantages" activeClassName="navActive">
-                <i></i>
-                <span>Avantages</span>
             </NavLink>
             </li>
             <li>

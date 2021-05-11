@@ -1,5 +1,7 @@
 import React from 'react';
 import QuestCard from './QuestCard';
+import Map from './Map';
+import "./QuestCard.css";
 
 const quetes = [
   {
@@ -30,10 +32,20 @@ const quetes = [
 ];
 
 function Quete() {
+const [pageMap, setPageMap] = React.useState(false);
+  function handleChange (){
+    setPageMap(!pageMap);
+}
+if (pageMap === true) {
+  return (<Map />);
+}
   return (
+    <div className="Quete">
+    <button className="btnR" type="button" onClick={handleChange}>Retour</button>
     <ul>
       {quetes.map((quete)=>(<li><QuestCard key={quete.id} quete={quete} /></li>))}
     </ul>
+    </div>
   )
 }
 

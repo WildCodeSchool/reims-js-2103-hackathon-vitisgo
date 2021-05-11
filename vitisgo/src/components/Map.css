@@ -1,0 +1,18 @@
+.btnCtn{
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    background-color: rgb(27, 27, 27);
+    border-top: solid rgb(1, 83, 1) 5px;;
+}
+.btnMap{
+background-color: rgb(250, 250, 250);
+border: solid rgb(1, 83, 1) 2px;
+color: rgb(1, 83, 1);
+margin: 20px;
+font-size: 1rem;
+    
+}
+.MapPage{
+    z-index: 1;
+}

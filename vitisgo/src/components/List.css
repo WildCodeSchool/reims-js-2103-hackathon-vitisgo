@@ -1,0 +1,21 @@
+.list{
+    display: inline-flex;
+    justify-content: center;
+}
+.list ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0;
+}
+
+.list ul li {
+    margin: 20px;
+    list-style: none;
+
+   
+}
+
+.list ul li span {
+    color: rgb(1, 83, 1);
+}

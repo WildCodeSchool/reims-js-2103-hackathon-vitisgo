@@ -1,7 +1,9 @@
 import React from "react";
 import Store from './Store';
-import MyPosition from './MyPosition'
+import Quete from './Quete';
+import MyPosition from './MyPosition';
 import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
+import './Map.css';
 
 const positions = [
   [49.15, 4.02],
@@ -11,7 +13,15 @@ const positions = [
 
 function Map (){
     const [pageStore, setPageStore] = React.useState(false);
-
+    const [pageQuest, setPageQuest] = React.useState(false);
+    
+    function questChange (){
+      setPageQuest(!pageQuest);
+  }
+  if (pageQuest === true) {
+    return (<Quete />);
+  }
+     
     function handleChange (){
         setPageStore(!pageStore);
     }
@@ -20,12 +30,12 @@ function Map (){
     }
     
         return(
+        <>
             <div className="MapPage">
-                <button className="btnMap" type="button" onClick={handleChange}>Shop</button>
                 <MapContainer
         style={{
           width: '100vw',
-          height: '100vh',
+          height: '90vh',
         }}
         center={positions[1]}
         zoom={13}
@@ -45,6 +55,11 @@ function Map (){
         <MyPosition />
       </MapContainer>
             </div>
+            <div className="btnCtn">
+            <button className="btnMap" type="button" onClick={handleChange}>Shop</button>
+            <button className="btnMap" type="button" onClick={questChange}>Quest</button>
+            </div>
+            </>
         );
 }
 
