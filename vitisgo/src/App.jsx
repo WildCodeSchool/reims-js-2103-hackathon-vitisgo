@@ -19,14 +19,14 @@ function App() {
       <Route path="/avantages" component={Benefits} />
       <Route path="/about" component={About} />
       <Route component={NotFound} />
-    </Switch>    
+    </Switch>
     </BrowserRouter>
     </>
   );
 }
 
 <div className="App">
-<Play/>      
+<Play/>
 </div>
 
 export default App;
