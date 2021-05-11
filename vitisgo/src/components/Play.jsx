@@ -1,11 +1,14 @@
 import React from "react";
-import Map from './Map'
+import Navigation from './Navigation';
 import "../App.css"
 
 function Play () {
 
-    return(
-     <button className="btn" type="button" onClick={Map}>Play</button>
+    return( 
+        <div>
+             <h1>Page d'accueil</h1>
+            <Navigation />
+        </div>           
     )
 }
 
