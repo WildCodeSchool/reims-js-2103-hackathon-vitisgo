@@ -1,0 +1,17 @@
+.questCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70vw;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    min-width: 20vw;
+    border: 2px black solid;
+    margin: 10px;
+}

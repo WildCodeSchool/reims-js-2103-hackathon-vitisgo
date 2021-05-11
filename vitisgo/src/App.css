@@ -1,3 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .btn{
-  color:black;
+  color:green;
+}
+
+.playPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playImage {
+  height: 400px;
 }
