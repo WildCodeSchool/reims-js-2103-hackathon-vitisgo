@@ -1,0 +1,29 @@
+.backG{
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+.Shop{
+    background-color: rgb(27, 27, 27);
+    z-index: 2;
+    position: relative;
+    top: 90vh;
+    height: 400px;
+    width: 880px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btnShop{
+    height: 100px;
+    width: 250px;
+    font-size: 2rem; 
+    border-radius: 20px;
+    background-color: rgb(54, 104, 1);
+    margin: 20px;
+    color: cornsilk;
+}
+.hiddenShop{
+    background-color: crimson;
+}
