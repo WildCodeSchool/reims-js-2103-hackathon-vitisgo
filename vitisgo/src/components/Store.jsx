@@ -9,7 +9,9 @@ function Store (){
 const [imageChange,setImageChange]= React.useState();
 const [hiddenShop,setHiddenShop]= React.useState(false);
 const [pageMap, setPageMap] = React.useState(false);
-    function handleChange (){
+const [isCount,setIsCount]=React.useState(0);
+  
+function handleChange (){
         setPageMap(!pageMap);
     }
     if (pageMap === true) {
@@ -25,22 +27,34 @@ const imgList = {
     2:Img3
 }
 function onClickOne(){
-  setImageChange(1)
+ if(isCount > 10){
+    setImageChange(1)
+    setIsCount(isCount - 10)
+  }
 }
 function onClickTwo(){
+  if(isCount > 500){
     setImageChange(2)
-  }
+    setIsCount(isCount - 500)
+  } 
+}
+function changeCount(){
+     setIsCount(isCount + 1)
+   }
     return(
    <>
    <div className="backG">
-        <img className="Image" src={imgList[imageChange] ?? Img1} alt="" />
+        <img className="Image" src={imgList[imageChange] ?? Img1} alt="" onClick={changeCount} />
     </div>
-  <button className="hiddenShop" type="button" onClick={changeState}>Shop</button>
-  <button className="return" type="button" onClick={handleChange}>Retour</button>
+  <div className="btn-content">
+  <button className="btnR" type="button" onClick={changeState}>Shop</button>
+  <span className="count">{isCount}</span>
+  <button className="btnR" type="button" onClick={handleChange}>Retour</button>
+  </div>
   { hiddenShop === true && (
     <div className="Shop">
-        <button className="btnShop" type="button" onClick={onClickOne} >Amélioration 1</button>
-        <button className="btnShop" type="button" onClick={onClickTwo} >Amélioration 2</button>
+        <button className="btnShop" type="button" onClick={onClickOne} >Amélioration 1: 10$</button>
+        <button className="btnShop" type="button" onClick={onClickTwo} >Amélioration 2: 500$</button>
     </div>
   )}  
     </>

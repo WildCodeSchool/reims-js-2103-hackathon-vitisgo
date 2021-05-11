@@ -1,29 +1,54 @@
 .backG{
     height: 100vh;
     width: 100vw;
-    z-index: 1;
+    z-index: -1;
+}
+.Image{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+.btn-content{
+    position: relative;
+    z-index: 2;
+    bottom: 95vh;
+    display: flex;
+    justify-content: space-around;
 }
 .Shop{
     background-color: rgb(27, 27, 27);
-    z-index: 2;
+    z-index: 3;
     position: relative;
-    top: 90vh;
-    height: 400px;
-    width: 880px;
+    bottom: 32vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height:25vh;
+    border-top: solid rgb(1, 83, 1) 5px;;
 }
 .btnShop{
-    height: 100px;
-    width: 250px;
-    font-size: 2rem; 
+    height: 40px;
+    width: 200px;
+    font-size: 1rem; 
     border-radius: 20px;
-    background-color: rgb(54, 104, 1);
-    margin: 20px;
-    color: cornsilk;
+    background-color: rgb(250, 250, 250);
+    border: solid rgb(1, 83, 1) 2px;
+    color: rgb(1, 83, 1);
+    margin: 10px;
+
 }
-.hiddenShop{
-    background-color: crimson;
+.btnR{
+    background-color: rgb(250, 250, 250);
+    border: solid rgb(1, 83, 1) 2px;
+    color: rgb(1, 83, 1);
+    border-radius: 5px ;
+    padding:2px;
+}
+
+.count{
+    color: rgb(1, 83, 1);
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(1, 83, 1) 2px;
+    width: 50px;
 }
