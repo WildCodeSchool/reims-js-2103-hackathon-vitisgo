@@ -29,12 +29,13 @@ const imgList = {
 function onClickOne(){
  if(isCount > 10){
     setImageChange(1)
+    setIsCount(isCount - 10)
   }
 }
 function onClickTwo(){
   if(isCount > 500){
-   return( setImageChange(2)
-   )
+    setImageChange(2)
+    setIsCount(isCount - 500)
   } 
 }
 function changeCount(){
