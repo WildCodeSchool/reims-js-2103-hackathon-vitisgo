@@ -1,5 +1,6 @@
 import React from "react";
-import Map from './Map'
+import Navigation from './Navigation';
+import Map from './Map';
 import "../App.css"
 import Logo from '../asset/logo.png';
 
@@ -16,6 +17,7 @@ if (playGame === true) {
         <div className="playPage">
             <img className="playImage" src={Logo} alt="logo" />
             <button className="btn" type="button" onClick={handleChange}>Play</button>
+            <Navigation />
         </div>
     )
 }
