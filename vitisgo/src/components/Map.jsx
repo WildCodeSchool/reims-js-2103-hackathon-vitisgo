@@ -6,10 +6,10 @@ import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 import './Map.css';
 
 const positions = [
-  [49.15, 4.02],
-  [49.25, 4.02],
-  [49.35, 4.02],
-]; 
+  [49.16, 4.04],
+  [49.17, 3.96],
+  [49.16, 4.11],
+];
 
 function Map (){
     const [pageStore, setPageStore] = React.useState(false);
@@ -48,7 +48,7 @@ function Map (){
         {positions.map((position) => (
           <Marker position={position}>
             <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
+              VitisGo vous accompagne partout !! <br /> Code Secret:Code
             </Popup>
           </Marker>
         ))}
