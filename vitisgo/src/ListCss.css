@@ -1,0 +1,33 @@
+@media screen and (max-width: 375px) {
+  .div_nav,
+  .ul,
+  .li {
+    color: red;
+  }
+  .li_nav {
+    display: inline;
+    margin-top: 50px;
+  }
+  .h1 {
+    color: rgb(46, 238, 46);
+  }
+  .span_nav {
+    color: rgb(1, 83, 1);
+  }
+  .p {
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .li_nav {
+    display: inline;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 1200px) {
+}
