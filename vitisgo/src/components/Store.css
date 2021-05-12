@@ -19,7 +19,7 @@
     background-color: rgb(27, 27, 27);
     z-index: 3;
     position: relative;
-    bottom: 30vh;
+    bottom: 35vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
