@@ -1,7 +1,18 @@
+.btnQuest{
+    width: 100vw;
+    background-color: rgb(6, 122, 25);
+    border-top: solid rgb(1, 83, 1) 1px;
+    font-size: 1rem;
+}
+
+
 .Quete{
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     z-index: 6;
     top:1vh;
+    position: relative;
 }
 
 .questCard {
@@ -29,4 +40,19 @@ ul li {
 
 ul{
     padding: 0;
+}
+
+.Modal{
+background-color: rgb(161, 161, 161);
+height:60px;
+width: 300px;
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+z-index: 99;
+bottom: 30vh;
+border: solid rgb(1, 83, 1) 2px;
+color: rgb(1, 83, 1);
+border-radius: 5px;
 }

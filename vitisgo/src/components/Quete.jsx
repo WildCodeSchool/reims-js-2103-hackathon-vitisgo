@@ -6,14 +6,22 @@ import "./QuestCard.css";
 const quetes = [
   {
     "id": 1,
+    "name": "Le Code secret",
+    "event": 4,
+    "description": "Trouver le Code secret sur votre carte",
+    "validated": true,
+    "reward": 300
+  },
+  {
+    "id": 2,
     "name": "Champagne en bord de mer",
     "event": 3,
-    "description": "Rendez vous au phare et trouvez les réponses du quizz.",
+    "description": "Rendez vous au phare et trouvez le code auprès du vigneron.",
     "validated": true,
     "reward": 100
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Du grain à moudre",
     "event": 2,
     "description": "Trouvez le moulin et faites une photo.",
@@ -21,7 +29,7 @@ const quetes = [
     "reward": 150
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Le faux du vrai",
     "event": 1,
     "description": "Partez à la recherche du code caché parmi les vrais tordus...",
@@ -33,7 +41,12 @@ const quetes = [
 
 function Quete() {
 const [pageMap, setPageMap] = React.useState(false);
-  function handleChange (){
+const [questM,setQuestM]= React.useState(false);
+function modalQuest () {
+setQuestM(!questM)
+  }
+
+function handleChange (){
     setPageMap(!pageMap);
 }
 if (pageMap === true) {
@@ -43,8 +56,15 @@ if (pageMap === true) {
     <div className="Quete">
     <button className="btnR" type="button" onClick={handleChange}>Retour</button>
     <ul>
-      {quetes.map((quete)=>(<li><QuestCard key={quete.id} quete={quete} /></li>))}
+      {quetes.map((quete)=>(<button className="btnQuest" onClick={modalQuest}><QuestCard key={quete.id} quete={quete} /></button>))}
     </ul>
+    {questM === true && (
+      <div className="Modal">
+          <p>Entrer le code</p>
+          <input type="text" id="name" name="name" required
+           minlength="4" maxlength="8" size="10"></input>
+      </div>
+    )}
     </div>
   )
 }
