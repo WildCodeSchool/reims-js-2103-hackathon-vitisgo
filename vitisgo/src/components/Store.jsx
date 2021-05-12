@@ -33,7 +33,6 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
-
  useInterval(() => {
   if(imageChange === 1){
   setIsCount(isCount + 1)}
